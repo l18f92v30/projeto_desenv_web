@@ -1,0 +1,196 @@
+/* Paleta de cores baseada em tons terrosos claros */
+:root {
+    --cor-fundo: #fdf8f3;
+    --cor-principal: #b2947e;
+    --cor-secundaria: #d8c3a5;
+    --cor-destaque: #a67c52;
+    --cor-texto: #3e2c1c;
+    --cor-hover: #c9a27a;
+}
+
+/* Configurações gerais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--cor-principal);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Barra de navegação */
+nav ul {
+  display: flex; /* itens alinhados horizontal */
+  justify-content: center; /* centralizar */
+  list-style: none; /* sem icone de lista */
+  padding: 0;
+  margin: 0;
+  background-color: #a97c50; /* Cor de fundo da barra */
+}
+
+nav ul li {
+  margin: 0 20px; /* espaço entre as palavras */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+}
+
+nav ul li a:hover {
+  background-color: #c69c6d; /* mudança de cor ao passar o mouse */
+  border-radius: 5px;
+}
+
+/* Área principal */
+main {
+    padding: 20px;
+}
+
+/* Biografia e curiosidades */
+.container-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.biografia, .curiosidades {
+    background-color: white;
+    border: 1px solid var(--cor-secundaria);
+    border-radius: 8px;
+    padding: 15px;
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Título das seções */
+h2 {
+    color: var(--cor-destaque);
+    border-bottom: 2px solid var(--cor-secundaria);
+    padding-bottom: 5px;
+}
+
+/* Botão Mostrar Mais */
+#botao-toggle {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: var(--cor-principal);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#botao-toggle:hover {
+    background-color: var(--cor-hover);
+}
+
+/* página cronologia */
+.tabela-container {
+    overflow-x: auto;
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fdfaf5;
+}
+
+th, td {
+    border: 1px solid #c2b8a3;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #a97c50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f1ebe3;
+}
+
+tr:hover {
+    background-color: #e3d8c4;
+}
+
+/* Galeria de Fotos */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.galeria img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--cor-principal);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+/* Pseudo-classe e pseudo-elemento */
+nav a:hover::after {
+    content: " ➤";
+    color: white;
+}
+
+.curiosidades p:first-child {
+    font-weight: bold;
+    color: var(--cor-destaque);
+}
+
+/* Manipulação de elementos escondidos */
+
+/* === Biografia === */
+.escondido {
+  display: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-info {
+        flex-direction: column;
+    }
+}
