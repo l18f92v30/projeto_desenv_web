@@ -194,3 +194,41 @@ nav a:hover::after {
         flex-direction: column;
     }
 }
+
+/* botão - fazer login */
+#btn-login {
+    display: block;
+    margin: 30px auto 10px auto; /* centralizado e com espaço acima */
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background-color: var(--cor-principal);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(166,124,82,0.4);
+    max-width: 300px;
+    width: 90%;
+    text-align: center;
+  }
+  
+  #btn-login:hover {
+    background-color: var(--cor-hover);
+  }
+ 
+  #login-bloco {
+    max-width: 400px;
+    margin: 20px auto 50px auto;
+    padding: 20px;
+    border: 2px solid var(--cor-secundaria);
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(178,148,126,0.3);
+  }
+
+  #login-bloco h2 {
+    text-align: center;
+    color: var(--cor-destaque);
+  }

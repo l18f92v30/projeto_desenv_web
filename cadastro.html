@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header>
+    <h1>Marie Curie <span aria-label="tubo de ensaio" role="img">🧪</span></h1>
+    <nav>
+        <ul class="menu">
+        <li><a href="index.html">Biografia</a></li>
+        <li><a href="curiosidades.html">Curiosidades</a></li>
+        <li><a href="premios.html">Cronologia</a></li>
+        <li><a href="fotos.html">Galeria</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+    </nav>
+    </header>
+
+<main>
+  <form id="cadastroForm" method="POST" action="cadastro.php">
+    <label for="nome">Nome:</label><br />
+    <input type="text" id="nome" name="nome" required /><br /><br />
+
+    <label for="email">E-mail:</label><br />
+    <input type="email" id="email" name="email" required /><br /><br />
+
+    <label for="senha">Senha:</label><br />
+    <input type="password" id="senha" name="senha" required /><br /><br />
+
+    <button type="submit">Cadastrar</button>
+  </form>
+</main>
+
+<footer>
+  <p>Projeto desenvolvido para fins educacionais - 2025</p>
+  <p>Por Leticia Faver.</p>
+</footer>
+
+</body>
+</html>
